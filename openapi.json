@@ -1,0 +1,30 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Softechpro Solutions — ECU Binary DTC Table Scanner REST API",
+    "version": "2.0.4",
+    "description": "High-speed **ECU binary fault-code table parser & active switch scanner REST API** returning all switchable OBD-II and manufacturer DTCs inside an uploaded stock readout. Official B2B API keys & plans at https://www.softechpro-solutions.com/developers"
+  },
+  "servers": [
+    {
+      "url": "https://www.softechpro-solutions.com"
+    }
+  ],
+  "paths": {
+    "/api/coverage-public": {
+      "get": {
+        "summary": "Retrieve live supported ECU brands, models and solution counts"
+      }
+    },
+    "/api/v1/analyze": {
+      "post": {
+        "summary": "Upload virgin original ECU binary to list available automated modules & checksum family"
+      }
+    },
+    "/api/v1/process": {
+      "post": {
+        "summary": "Apply selected calibration modules (DPF, EGR, AdBlue, DTC, Stage 1) with automatic checksum & CVN correction"
+      }
+    }
+  }
+}
